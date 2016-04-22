@@ -18,7 +18,7 @@ What to do
 2. Create database in phpmyadmin called computer_availability.  
 3. Select computer_availability. Go to SQL tab, copy and paste the SQL provided to create table in phpmyadmin.  
 4. Go to Privileges tab, add user and password for computer_availabilty database.  
-5. Put statuschange.php and computers.php on your server. For my case for Ubuntu, at /var/www/html. I used SSH to connect to my server.
+5. Put statuschange.php and computers.php on your server. For my case for Ubuntu, at /var/www/html. I used SSH to connect to my server.       
 6. Edit statuschange.php. Edit user and password.   
 7. Edit computers.php. Edit user and password.  
 8. The perl scripts are run on the comptuers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
