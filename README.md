@@ -25,4 +25,4 @@ What to do
 9. Run the scripts.   
 10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.           
 11. Your map should display at http://yourdomain.edu/computers.php.        
-12. Search online for tutorials on how to secure apache2 server and phpmyadmin and other things as well. 
+12. Search online for tutorials on how to secure apache2 server and phpmyadmin and other things as well. For example, the PHP scripts have user and password information. You need to hide the contents of the PHP scripts. Or you can edit the Perl scripts and PHP scripts so where the Perl scripts can pass credentials information to the PHP scripts. 
