@@ -23,6 +23,6 @@ What to do
 7. Edit computers.php. Edit user and password.  
 8. The perl scripts are run on the comptuers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
 9. Run the scripts.   
-10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.
+10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.           
 11. Your map should display at http://yourdomain.edu/computers.php.        
 12. Search online for tutorials on how to secure apache2 server and phpmyadmin and other things as well. 
