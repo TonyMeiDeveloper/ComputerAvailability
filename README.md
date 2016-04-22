@@ -4,8 +4,11 @@ Prototype of Computer Availability
 Based on this guide: http://journal.code4lib.org/articles/4067  
 Also thanks and credits to OSU libraries and their open source code: https://github.com/griggsk/availability-map
 
-I deployed this on AWS, specifically Linux Ubuntu Server
+What it is
+Perl scripts run on login or logout and signifies computer status and sends that information and its computername or IP address to a PHP script running on a server. The PHP script, which in this case, is statuschange.php gets that information and updates the database. The UI or computers.php gets information from the database and use it to display computer availability. 
 
+
+I deployed this on AWS, specifically Linux Ubuntu Server
 Requirements   
 Install these first:
 PHP, MySQL, APACHE2, phpmyadmin
@@ -20,5 +23,6 @@ What to do
 7. Edit computers.php. Edit user and password.  
 8. The perl scripts are run on the comptuers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
 9. Run the scripts.   
-10. Check database to see if computers are added. Also manunally edit their locations on the map and type of computer whether Mac or PC.
+10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.
 11. Your map should display at http://yourdomain.edu/computers.php. 
+12. Search online for tutorials on how to secure apache2 server and phpmyadmin and other things as well. 
