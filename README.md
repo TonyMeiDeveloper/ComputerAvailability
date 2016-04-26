@@ -20,7 +20,7 @@ What to do
 4. Go to Privileges tab, add user and password for computer_availabilty database.  
 5. Put statuschange.php and computers.php and images on your server. For my case for Ubuntu, at /var/www/html. I used SSH to connect to my server.       
 6. Edit statuschange.php. Edit user and password.   
-7. Edit computers.php. Edit user and password.  
+7. Edit computers.php. Edit user and password. You should edit the maps and put your maps and their url locations.       
 8. The perl scripts are run on the comptuers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
 9. Run the scripts.   
 10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.           
