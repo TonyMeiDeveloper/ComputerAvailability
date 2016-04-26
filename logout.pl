@@ -12,7 +12,7 @@ $ua = LWP::UserAgent->new;
 $ua->timeout(60);
 
 #send the HTTP request with the status of 0 and computer name and the host
-$request = $ua->post('http://ec2-52-39-117-46.us-west-2.compute.amazonaws.com/statuschange.php',
+$request = $ua->post('http://yourdomain.edu/statuschange.php',
             	["status" => "0",
             	"workstation" => $ipaddr,
    	 "host" => $host]);
