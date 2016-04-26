@@ -1,7 +1,7 @@
 <?php
 #add your database username and password
-$user="gots_user";
-$password="my_password";
+$user="enterusername";
+$password="enterpassword";
 $database="computer_availability";
 
 #unless the computers name was empty
@@ -14,7 +14,7 @@ $host_domain = strstr($_POST['host'], '.');
         $workstation = strtoupper(str_replace($host_domain, '', $_POST['host']));
 }
 
-#connect to the database
+#connect to the database, I used localhost for mine. Might be different for you. 
 $DB = mysql_connect('localhost', $user, $password);
 @mysql_select_db($database) or die("Unable to select database");
 
