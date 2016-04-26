@@ -1,21 +1,26 @@
 <!doctype html>
 <html>
 <head>
+
+  <title>Computer Availability</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
 <style>
-        #computer_map
+        #RaynorFirstFloorMap
         {
                 background: url('/ComputerAvailability/Images/RaynorFirst.png');
                 background-repeat: no-repeat;
-
-                height: 1000px
-
+                height:1000px;
         }
 
-        p
-        {
-                text-align: left;
 
-        }
+
 </style>
 </head>
 </html>
@@ -48,11 +53,60 @@ mysql_close($DB);
 
 
 
-<p>PC's available: <?php echo $pcs; ?> Mac's available: <?php echo $macs; ?></p>
+<body>
+
+<div class="container">
+  <h2>Computer Availability</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Raynor First Floor</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Raynor First Floor</h3>
+      <p>PC's available: <?php echo $pcs; ?> Mac's available: <?php echo $macs; ?></p>
+
+        <div id="RaynorFirstFloorMap">
+                <?php
 
 
-<div id="computer_map">
+                        while($row = mysql_fetch_array($result))
+                        {
 
+                                #check computer status
+                                if($row['status']==0)
+                                {
+                                        echo '<img src="/ComputerAvailability/Images/Mac_open_30px.jpg" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
+                                }
+                                else
+                                {
+                                        echo '<img src="/ComputerAvailability/Images/Mac_in_use_30px.jpg" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
+                                }
+                        }
 
+                ?>
+        </div>
 
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Insert Second Floor</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Insert Lower Level</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Insert Memorial Level</p>
+    </div>
+  </div>
 </div>
+
+</body>
+
+
+
