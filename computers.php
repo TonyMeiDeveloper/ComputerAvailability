@@ -28,8 +28,8 @@
 <?php
 
 #add your database username and password
-$user="gots_user";
-$password="my_password";
+$user="yourusername";
+$password="yourpassword";
 $database="computer_availability";
 
 #connect to the database, I have it as localhost for my case. Might be different for your case. 
