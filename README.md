@@ -15,7 +15,7 @@ PHP, MySQL, APACHE2, phpmyadmin
 
 What to do   
 1. Login to phpmyadmin at http://yourdomain.edu/phpmyadmin.   
-2. Run the sql code to create the database computer_availability and the table compstatus.    
+2. Click the SQL tab. Copy and paste and click go to run the SQL code to create the database computer_availability and the table compstatus.    
 3. Refresh the page to see your changes. Double check.     
 4. Select the database you just created. Go to Privileges tab, add user and password for computer_availabilty database.  
 5. Put statuschange.php and computers.php and images on your server. For my case for Ubuntu, at /var/www/html. I used SSH to connect to my server.       
