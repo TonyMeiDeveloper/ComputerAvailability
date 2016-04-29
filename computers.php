@@ -1,5 +1,5 @@
-<?php
-        header("refresh: 10;");
+?php
+        header("refresh: 30;");
 ?>
 
 <!doctype html>
@@ -15,17 +15,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 <script type="text/javascript">
-
+        //insert javascript
 
 </script>
 
 <style type="text/css">
+
         #RaynorFirstFloorMap
         {
                 background: url('/ComputerAvailability/Images/RaynorFirst.png');
                 background-repeat: no-repeat;
                 height: 610px;
 
+        }
+        #legend
+        {
 
         }
 </style>
@@ -34,10 +38,9 @@
 
 
 <?php
-
 #add your database username and password
-$user="yourusername";
-$password="yourpassword";
+$user="enterusername";
+$password="enterpassword";
 $database="computer_availability";
 
 #connect to the database, I have it as localhost for my case. Might be different for your case. 
@@ -56,11 +59,22 @@ $macs = mysql_num_rows($avail_mac_results) . '/' . mysql_num_rows($total_mac_res
 #get all the computer's row of data
 $result = mysql_query("SELECT * FROM compstatus");
 
+#get all the computers on Raynor First Floor
+$raynorfirst=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorFirst'");
+
+#get all the computers on Raynor Second Floor
+$raynorsecond=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorSecond'");
+
+#get all the computers on Raynor Lower Floor
+$raynorlower=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorLower'");
+
+#get all the computers on Memorial
+$raynormemorial=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorMemorial'");
+
+
+
 mysql_close($DB);
 ?>
-
-
-
 <body>
 
 <div class="container">
@@ -68,44 +82,60 @@ mysql_close($DB);
 
   <ul class="nav nav-tabs" id="myTab">
     <li class="active"><a data-toggle="tab" href="#home">Raynor First Floor</a></li>
-    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+    <li><a data-toggle="tab" href="#menu1">Raynor Second Floor</a></li>
+    <li><a data-toggle="tab" href="#menu2">Raynor Lower Level</a></li>
+    <li><a data-toggle="tab" href="#menu3">Memorial</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in  active">
       <h3>Raynor First Floor</h3>
       <p>PC's available: <?php echo $pcs; ?> Mac's available: <?php echo $macs; ?></p>
-      
+
         <div id="RaynorFirstFloorMap">
                 <?php
 
                         $type=null;
                         $status=null;
 
-                        while($row = mysql_fetch_array($result))
+                        while($row = mysql_fetch_array($raynorfirst))
                         {
 
-                                #check computer type
-                                if($row['computer_type']=='Mac')
-                                {
-                                        $type="fa fa-apple";
-                                }
-                                else
-                                {
-                                        $type="fa fa-windows";
-                                }
+
 
                                 #check computer status
                                 if($row['status']==0)
                                 {
                                         $status="green";
+
+                                        #check computer type
+                                        if($row['computer_type']=='Mac')
+                                        {
+                                                $type="fa fa-apple";
+                                        }
+                                        else
+                                        {
+                                                $type="fa fa-windows";
+                                        }
+
                                 }
                                 else
                                 {
                                         $status="red";
+
+
+                                        #check computer type
+                                        if($row['computer_type']=='Mac')
+                                        {
+                                                $type="fa fa-times-circle";
+                                        }
+                                        else
+                                        {
+                                                $type="fa fa-times";
+                                        }
                                 }
+
+
 
                                 #error checking
                                 if($row['left_pos']==0 && $row['top_pos']==0)
@@ -117,38 +147,35 @@ mysql_close($DB);
                                         echo '<i class="'.$type.'" aria-hidden="true" style="color:'.$status.';position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"></i>';
                                 }
 
-
-
-
-
                         }
 
                 ?>
-</div>
+        </div>
 
     </div>
 
 
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
+      <h3>Raynor Second Floor</h3>
       <p>Insert Second Floor</p>
     </div>
 
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
+      <h3>Raynor Lower Level</h3>
       <p>Insert Lower Level</p>
     </div>
 
     <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
+      <h3>Memorial</h3>
       <p>Insert Memorial Level</p>
     </div>
 
   </div>
-<i class="fa fa-windows" aria-hidden="true" style="color:green;"></i> PC Available     <i class="fa fa-windows" aria-hidden="true" style="color:red;"></i> PC Busy     <i class="fa fa-apple" aria-hidden="true" style="color:green;"></i> Mac Available     <i class="fa fa-apple" aria-hidden="true" style="color:red;"></i> Mac Busy
-
-    <br>
-        Page auto refreshes every 10 seconds
+        <div id="legend">
+<i class="fa fa-windows" aria-hidden="true" style="color:green;"></i> PC Available     <i class="fa fa-times" aria-hidden="true" style="color:red;"></i> PC Busy     <i class="fa fa-apple" aria-hidden="true" style="color:green;"></i> Mac Available     <i class="fa fa-times-circle" aria-hidden="true" style="color:red;"></i> Mac Busy
+            <br>
+        Page auto refreshes every 30 seconds
+        </div>
 
 </div>
 
