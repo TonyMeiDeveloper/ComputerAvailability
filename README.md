@@ -23,6 +23,6 @@ What to do
 7. Edit computers.php. Edit user and password. You should edit the maps and put your maps and their url locations.       
 8. The perl scripts are run on the computers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
 9. Run the scripts.   
-10. Check database to see if computers are added. Also manually edit their locations on the map and type of computer whether Mac or PC.           
+10. Check database to see if computers are added. Also manually edit their locations by percentages on the map and type of computer whether Mac or PC and floor which in this case, whether RaynorFirst, RaynorSecond, RaynorLower, RaynorMemorial.               
 11. Your map should display at http://yourdomain.edu/computers.php.        
 12. Search online for tutorials on how to secure apache2 server and phpmyadmin and other things as well. For example, the PHP scripts have user and password information. You need to hide the contents of the PHP scripts. Or you can edit the Perl scripts and PHP scripts so where the Perl scripts can pass credentials information to the PHP scripts. 
