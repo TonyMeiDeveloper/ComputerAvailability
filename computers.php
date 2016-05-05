@@ -1,5 +1,5 @@
 <?php
-        #header("refresh: 30;");
+        header("refresh: 30;");
 ?>
 
 <!doctype html>
@@ -21,15 +21,15 @@
 
 <style type="text/css">
 
-
         #counter
         {
                 position:relative;
-                display: inline;
+
         }
         #over
         {
 
+                max-width:10%;
         }
 
 
@@ -38,11 +38,31 @@
                 vertical-align:bottom;
         }
 
+        img
+        {
+                width:100%;
+        }
+        .fa
+        {
+                font-size:10px;
+        }
+
+        @media screen and (max-width: 480px) {
+        .fa {
+                font-size: 10px;
+                }
+        }
+        @media screen and (min-width: 800px) {
+        .fa {
+                font-size: 20px;
+                }
+        }
+
+
 
 </style>
 
 </head>
-
 
 <?php
 #add your database username and password
@@ -153,7 +173,7 @@ mysql_close($DB);
                                 {
                                         #Places icons  on top of background map based on locations of the computer provided from database
                                         echo '<div id= "over " 
-                                        <i class="'.$type.'" aria-hidden="true" style="color:'.$status.';position:absolute;left:'.$row['left_pos'].'%;top:'.$row['top_pos'].'%;"></i>
+                                        <i class="'.$type.'" aria-hidden="true" style="max-width:10%;color:'.$status.';position:absolute;left:'.$row['left_pos'].'%;top:'.$row['top_pos'].'%;"></i>
                                         </div>';
                                 }
                         }
@@ -204,12 +224,12 @@ mysql_close($DB);
                                 addicons($raynorfirst);
                         ?>
 
-                <img src="/ComputerAvailability/Images/RaynorFirst.png" alt="bg" />
+                <img src="/ComputerAvailability/Images/RaynorFirst.png"  alt="bg" />
         </div>
 
-
-
     </div>
+
+
 
 
 
@@ -249,7 +269,7 @@ mysql_close($DB);
                         ?>
 
 
-                <img src="/ComputerAvailability/Images/RaynorLower.png" alt="bg" />
+                <img src="/ComputerAvailability/Images/RaynorLower.png"  alt="bg" />
         </div>
 
 
@@ -271,7 +291,7 @@ mysql_close($DB);
                         ?>
 
 
-                <img src="/ComputerAvailability/Images/RaynorMemorial.png" alt="bg" />
+                <img src="/ComputerAvailability/Images/RaynorMemorial.png"  alt="bg" />
         </div>
 
 
