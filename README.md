@@ -4,14 +4,15 @@ Prototype of Computer Availability. Backend of app is done. Frontend UI needs mo
 Based on this guide: http://journal.code4lib.org/articles/4067  
 Also thanks and credits to OSU libraries and their open source code: https://github.com/griggsk/availability-map
 
-What it is      
+What it is:      
 Perl scripts run on login or logout and signifies computer status and sends that information and its computername or IP address to a PHP script running on a server. The PHP script, which in this case, is statuschange.php gets that information and updates the database. The UI or computers.php gets information from the database and use it to display computer availability. 
 
+For my case:
+I deployed this on AWS, specifically Linux Ubuntu Server. It is set up for the library I worked at.     
 
-I deployed this on AWS, specifically Linux Ubuntu Server    
-Requirements         
+Requirements:         
 Install these first:
-PHP, MySQL, APACHE2, phpmyadmin
+PHP, MySQL, APACHE2, PHPMYADMIN
 
 What to do   
 1. Login to phpmyadmin at http://yourdomain.edu/phpmyadmin.   
