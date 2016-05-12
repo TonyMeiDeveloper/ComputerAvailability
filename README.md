@@ -17,7 +17,7 @@ I tested it and it works on Safari, Firefox, and Internet Explorer browsers. I h
 
 Requirements:         
 Install these first:
-PHP, MySQL, APACHE2, PHPMYADMIN, PUTTY if you are on Windows trying to SSH into a server.   
+PHP, MySQL, APACHE2 or a LAMP Server, etc, PHPMYADMIN, PUTTY if you are on Windows trying to SSH into a server.   
 
 What to do:    
 1. Login to phpmyadmin at http://yourdomain.edu/phpmyadmin.   
