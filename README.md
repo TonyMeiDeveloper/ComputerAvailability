@@ -9,6 +9,7 @@ Perl scripts run on login or logout and signifies computer status and sends that
 
 For my case:
 I deployed this on AWS, specifically Linux Ubuntu Server. It is set up for the library I worked at.     
+It works on Safari, Firefox, Internet Explorer browsers. I haven't tested on Opera and Google Chrome, but it should work.   
 
 Requirements:         
 Install these first:
