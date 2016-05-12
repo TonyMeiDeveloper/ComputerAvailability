@@ -13,9 +13,9 @@ It works on Safari, Firefox, Internet Explorer browsers. I haven't tested on Ope
 
 Requirements:         
 Install these first:
-PHP, MySQL, APACHE2, PHPMYADMIN
+PHP, MySQL, APACHE2, PHPMYADMIN, Putty if you are on Windows trying to SSH into a server.   
 
-What to do   
+What to do:    
 1. Login to phpmyadmin at http://yourdomain.edu/phpmyadmin.   
 2. Click the SQL tab. Copy and paste the SQL code and click go to run the SQL code to create the database computer_availability and the table compstatus.    
 3. Refresh the page to see your changes. Double check.     
