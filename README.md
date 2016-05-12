@@ -12,7 +12,7 @@ What it is:
 5. The UI or computers.php gets information from the database and use it to display computer availability. computers.php uses a variety of web development languages like HTML, CSS, and Javascript. It also uses Bootstrap and has responsive design elements in CSS for well, responsive design so that the web application works and displays on mobile devices like smartphones and tablets.   
 
 For my case:   
-I deployed this on AWS, specifically Linux Ubuntu Apache2 Server. The Web Application is set up with names, and floors, and images for the library I worked at.       
+I deployed this on AWS EC2 Instance, specifically Linux Ubuntu Apache2 Server. The Web Application is set up with names, and floors, and images for the library I worked at.       
 I tested it and it works on Safari, Firefox, and Internet Explorer browsers. I haven't tested on Opera and Google Chrome, but it should work.   
 
 Requirements:         
