@@ -1,5 +1,5 @@
 # ComputerAvailability
-Prototype of Computer Availability. Backend of Web Application is done. Frontend UI needs more work.   
+Prototype of Computer Availability Web Application. Backend of Web Application is done. Frontend UI needs more work.   
 
 Based on this guide: http://journal.code4lib.org/articles/4067  
 Also thanks and credits to OSU libraries and their open source code: https://github.com/griggsk/availability-map
