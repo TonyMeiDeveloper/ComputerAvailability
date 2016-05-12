@@ -67,11 +67,11 @@ mysql_close($DB);
                                 #check computer status
                                 if($row['status']==0)
                                 {
-                                        echo '<img src="/ComputerAvailability/Images/Mac_open_30px.jpg" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
+                                        echo '<img src="/ComputerAvailability/Images/Macopenpicture" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
                                 }
                                 else
                                 {
-                                        echo '<img src="/ComputerAvailability/Images/Mac_in_use_30px.jpg" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
+                                        echo '<img src="/ComputerAvailability/Images/Macbusypicture" style="position:relative;left:'.$row['left_pos'].'px;top:'.$row['top_pos'].'px;"/>';
                                 }
                         }
                 ?>
