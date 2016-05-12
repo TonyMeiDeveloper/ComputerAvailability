@@ -1,19 +1,23 @@
 # ComputerAvailability
-Prototype of Computer Availability. Backend of web app is done. Frontend UI needs more work.   
+Prototype of Computer Availability. Backend of Web Application is done. Frontend UI needs more work.   
 
 Based on this guide: http://journal.code4lib.org/articles/4067  
 Also thanks and credits to OSU libraries and their open source code: https://github.com/griggsk/availability-map
 
 What it is:      
-Perl scripts run on login or logout and signifies computer status and sends that information and its computername or IP address to a PHP script running on a server. The PHP script, which in this case, is statuschange.php gets that information and updates the database. The UI or computers.php gets information from the database and use it to display computer availability. 
+1. Perl scripts run on computer logins and logouts. 
+2. Login and Logout scripts each signifies computer status whether they are available or not.
+3. The scripts send computer status and its computername or IP address to a PHP script running on a server called statuschange.php. It is done using a HTTP POST request. 
+4. statuschange.php receives that information and updates the database or create a new computer entry in the table.
+5. The UI or computers.php gets information from the database and use it to display computer availability. computers.php uses a variety of web development languages like HTML, CSS, and Javascript. It also uses Bootstrap and has responsive design elements in CSS for well, responsive design so that the web application works and displays on mobile devices like smartphones and tablets.  
 
 For my case:
-I deployed this on AWS, specifically Linux Ubuntu Server. It is set up for the library I worked at.     
-It works on Safari, Firefox, Internet Explorer browsers. I haven't tested on Opera and Google Chrome, but it should work.   
+I deployed this on AWS, specifically Linux Ubuntu Apache2 Server. The Web Application is set up with names, and floors, and images for the library I worked at.       
+I tested it and it works on Safari, Firefox, and Internet Explorer browsers. I haven't tested on Opera and Google Chrome, but it should work.   
 
 Requirements:         
 Install these first:
-PHP, MySQL, APACHE2, PHPMYADMIN, Putty if you are on Windows trying to SSH into a server.   
+PHP, MySQL, APACHE2, PHPMYADMIN, PUTTY if you are on Windows trying to SSH into a server.   
 
 What to do:    
 1. Login to phpmyadmin at http://yourdomain.edu/phpmyadmin.   
