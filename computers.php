@@ -301,10 +301,23 @@ mysql_close($DB);
 
 </div>
 
-Page Updates Every 30 Seconds
+Page Refreshes every 30 seconds.
+<br>
+Last Updated:
+<p id="update"></p>
+
+
+<script>
+        var d= new Date();
+        document.getElementById("update").innerHTML=d;
+</script>
+
+
+
 </div>
 
 </body>
 
 
 </html>
+
