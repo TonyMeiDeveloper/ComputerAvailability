@@ -36,12 +36,19 @@ What to do:
 Screenshots:
 
 Desktop Version of Web Application:
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Desktop1.png)
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Desktop2.png)
 
-Mobile Version of Web Application:
+
+Mobile Version of Web Application:  
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Mobile1.png)
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Mobile2.png)
 
+
 Sample screenshot of PHPMYADMIN and how the database and table should look like. Of course, the entries are samples.
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/PHPMYADMIN.png)
