@@ -39,12 +39,16 @@ Desktop Version of Web Application:
 
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Desktop1.png)
 
+Another tab or floor: 
+
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Desktop2.png)
 
 
 Mobile Version of Web Application:  
 
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Mobile1.png)
+
+Another tab or floor: 
 
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Mobile2.png)
 
