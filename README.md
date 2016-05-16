@@ -28,7 +28,20 @@ What to do:
 6. Edit statuschange.php. Edit user and password.   
 7. Edit computers.php. Edit user and password. You should edit the names of the SQL queries and the queries themselves. You should also edit the maps and their image src locations. Customize the script heavy with names of your locations, delete or add more maps, tabs for floors, etc.   
 8. The perl scripts are run on the computers. Edit them both so it connects to http://yourdomain.edu/statuschange.php.   
-9. Run the scripts.   
+9. Run the scripts. 
+```
+perl login.pl
+perl logout.pl
+```
+
+If you want to convert the perl scripts to .exe to run on windows. Do the command:
+
+```
+pp -o login.exe login.pl
+pp -o logout.exe logout.pl
+```
+
+
 10. Check database in PHPMYADMIN to see if computers are added. Also manually edit their locations (percentages, not px) on the map and type of computer whether Mac or PC and floor which in this case, whether RaynorFirst, RaynorSecond, RaynorLower, RaynorMemorial. Also note that the icons that indicate computers on the map are font icons from FontAwesome.                 
 11. Your map should display at http://yourdomain.edu/computers.php or where ever you put computers.php at.         
 12. Search online for tutorials on how to secure APACHE2 server and PHPMYADMIN and other things as well. For example, the PHP scripts have user and password information. You need to hide the contents of the PHP scripts and/or other files. Or you can edit the Perl scripts and PHP scripts so where the Perl scripts can pass credentials information to the PHP scripts. Another thing is that statuschange.php receives HTTP POST requests. Maybe you can edit and limit the amount of requests to avoid Denial of Service attacks. Also add and modify the code to check if computers are valid, etc. The more security features, the better.      
