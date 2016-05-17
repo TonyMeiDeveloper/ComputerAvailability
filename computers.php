@@ -114,13 +114,13 @@ $lower_avail_mac_results = mysql_query("SELECT * FROM compstatus WHERE status='0
 $lowermacs = mysql_num_rows($lower_avail_mac_results) . '/' . mysql_num_rows($lower_total_mac_results);
 
 #get all the computers on Memorial
-$raynormemorial=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorMemorial'");
-$raynormemorial=mysql_query("SELECT * FROM compstatus WHERE floor='RaynorMemorial'");
-$memorial_total_pc_results = mysql_query("SELECT * FROM compstatus WHERE computer_type='PC' AND floor='RaynorMemorial'");
-$memorial_avail_pc_results = mysql_query("SELECT * FROM compstatus WHERE status='0' AND computer_type='PC' AND floor='RaynorMemorial'");
+$raynormemorial=mysql_query("SELECT * FROM compstatus WHERE floor='Memorial'");
+$raynormemorial=mysql_query("SELECT * FROM compstatus WHERE floor='Memorial'");
+$memorial_total_pc_results = mysql_query("SELECT * FROM compstatus WHERE computer_type='PC' AND floor='Memorial'");
+$memorial_avail_pc_results = mysql_query("SELECT * FROM compstatus WHERE status='0' AND computer_type='PC' AND floor='Memorial'");
 $memorialpcs = mysql_num_rows($memorial_avail_pc_results) . '/' .mysql_num_rows($memorial_total_pc_results);
-$memorial_total_mac_results = mysql_query("SELECT * FROM compstatus WHERE computer_type='MAC' AND floor='RaynorMemorial'");
-$memorial_avail_mac_results = mysql_query("SELECT * FROM compstatus WHERE status='0' AND computer_type='MAC' AND floor='RaynorMemorial'");
+$memorial_total_mac_results = mysql_query("SELECT * FROM compstatus WHERE computer_type='MAC' AND floor='Memorial'");
+$memorial_avail_mac_results = mysql_query("SELECT * FROM compstatus WHERE status='0' AND computer_type='MAC' AND floor='Memorial'");
 $memorialmacs = mysql_num_rows($memorial_avail_mac_results) . '/' . mysql_num_rows($memorial_total_mac_results);
 
 mysql_close($DB);
