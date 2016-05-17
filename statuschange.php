@@ -1,7 +1,7 @@
 <?php
 #add your database username and password
-$user="enterusername";
-$password="enterpassword";
+$user="gots_user";
+$password="my_password";
 $database="computer_availability";
 
 #unless the computers name was empty
@@ -14,7 +14,7 @@ $host_domain = strstr($_POST['host'], '.');
         $workstation = strtoupper(str_replace($host_domain, '', $_POST['host']));
 }
 
-#connect to the database, I used localhost for mine. Might be different for you. 
+#connect to the database
 $DB = mysql_connect('localhost', $user, $password);
 @mysql_select_db($database) or die("Unable to select database");
 
@@ -29,7 +29,7 @@ if(mysql_numrows($result)>0){
 }
 else
 {
-        $query="INSERT INTO compstatus(computer_name,status) VALUES('".$workstation."','".$_POST['status']."')";
+        $query="INSERT INTO compstatus(computer_name,status,computer_type,floor) VALUES('".$workstation."','".$_POST['status']."','".$_POST['computertype']."','".$_POST['floor']."')";
         mysql_query($query) or die(mysql_error());
 }
 
