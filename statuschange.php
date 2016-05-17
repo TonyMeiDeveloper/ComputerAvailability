@@ -1,7 +1,7 @@
 <?php
 #add your database username and password
-$user="gots_user";
-$password="my_password";
+$user="enterusername";
+$password="enterpassword";
 $database="computer_availability";
 
 #unless the computers name was empty
@@ -29,7 +29,7 @@ if(mysql_numrows($result)>0){
 }
 else
 {
-        $query="INSERT INTO compstatus(computer_name,status,computer_type,floor) VALUES('".$workstation."','".$_POST['status']."','".$_POST['computertype']."','".$_POST['floor']."')";
+        $query="INSERT INTO compstatus(computer_name,status,computer_type,configuration,floor) VALUES('".$workstation."','".$_POST['status']."','".$_POST['computertype']."', '".$_POST['configuration']."' , '".$_POST['floor']."')";
         mysql_query($query) or die(mysql_error());
 }
 
