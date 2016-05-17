@@ -5,9 +5,9 @@ Based on this guide: http://journal.code4lib.org/articles/4067
 Also thanks and credits to OSU libraries and their open source code: https://github.com/griggsk/availability-map
 
 What it is:      
-1. Perl scripts run on computer logins and logouts.      
+1. Perl scripts or VBScripts for Windows run on computer logins and logouts.      
 2. Login and Logout scripts each signifies computer status whether they are available or not.    
-3. The scripts send computer status and its computername or IP address to a PHP script running on a server called statuschange.php. It is done using a HTTP POST request.     
+3. The scripts send computer status and its computername and other information to a PHP script running on a server called statuschange.php. It is done using a HTTP POST request.     
 4. statuschange.php receives that information and updates the database or create a new computer entry in the table.    
 5. The UI or computers.php gets information from the database and use it to display computer availability. computers.php uses a variety of web development languages like HTML, CSS, and Javascript. It also uses Bootstrap and has responsive design elements in CSS for well, responsive design so that the web application works and displays on mobile devices like smartphones and tablets.   
 
@@ -33,7 +33,7 @@ What to do:
 perl login.pl
 perl logout.pl
 ```
-10. Check database in PHPMYADMIN to see if computers are added. Also manually edit their locations (percentages, not px) on the map and type of computer whether Mac or PC and floor which in this case, whether RaynorFirst, RaynorSecond, RaynorLower, Memorial. Also note that the icons that indicate computers on the map are font icons from FontAwesome.                 
+10. Check database in PHPMYADMIN to see if computers are added. Also manually edit their locations (percentages, not px) on the map. If needed, you can edit type of computer whether Mac or PC and floor which in this case, whether RaynorFirst, RaynorSecond, RaynorLower, Memorial. Also note that the icons that indicate computers on the map are font icons from FontAwesome.                 
 11. Your map should display at http://yourdomain.edu/computers.php or where ever you put computers.php at.         
 12. Search online for tutorials on how to secure APACHE2 server and PHPMYADMIN and other things as well. For example, the PHP scripts have user and password information. You need to hide the contents of the PHP scripts and/or other files. Or you can edit the Perl scripts and PHP scripts so where the Perl scripts can pass credentials information to the PHP scripts. Another thing is that statuschange.php receives HTTP POST requests. Maybe you can edit and limit the amount of requests to avoid Denial of Service attacks. Also add and modify the code to check if computers are valid, etc. The more security features, the better.      
 
