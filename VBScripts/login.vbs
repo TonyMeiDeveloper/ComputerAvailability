@@ -76,7 +76,7 @@ end If
 'Reference http://www.computerhope.com/forum/index.php?topic=126519.0
 
 'URL to open, specify your domain for your server....
-sUrl = "http://ec2-52-40-21-169.us-west-2.compute.amazonaws.com/statuschange.php"
+sUrl = "EnterYourDomain/statuschange.php"
 'POST Request to send.
 sRequest = "status=1&workstation=" & strComputerName & "&computertype=PC" & "&configuration=" &strConfiguration & "&floor=" &strFloor
 HTTPPost sUrl, sRequest
