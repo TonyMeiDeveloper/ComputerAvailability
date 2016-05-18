@@ -57,6 +57,6 @@ Another tab or floor:
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/Mobile2.png)
 
 
-Sample screenshot of PHPMYADMIN and how the database and table should look like. Of course, the entries are samples.
+Sample screenshot of PHPMYADMIN and how the database and table should look like. You should also see a configuration column. Of course, the entries are samples.
 
 ![alt tag](https://github.com/TonyMeiDeveloper/ComputerAvailability/blob/master/Screenshots/PHPMYADMIN.png)
