@@ -29,7 +29,7 @@ if(mysql_numrows($result)>0){
 }
 else
 {
-        $query="INSERT INTO compstatus(computer_name,status,computer_type,configuration,floor) VALUES('".$workstation."','".$_POST['status']."','".$_POST['computertype']."', '".$_POST['configuration']."' , '".$_POST['floor']."')";
+        $query="INSERT INTO compstatus(computer_name,status,computer_type,configuration,floor,left_pos,top_pos) VALUES('".$workstation."','".$_POST['status']."','".$_POST['computertype']."', '".$_POST['configuration']."' , '".$_POST['floor']."'  ,'".$_POST['left_pos']."' , '".$_POST['top_pos']."')";
         mysql_query($query) or die(mysql_error());
 }
 
